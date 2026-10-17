@@ -1,6 +1,8 @@
 import MessageComposer from "./MessageComposer";
+import MessageList from "./MessageList";
 
-function ChatWindow({ conversation, currentUserId }) {
+function ChatWindow({ conversation, currentUserId, messages }) {
+  
   if (!conversation) {
     return (
       <main className="flex-1 min-w-0 flex items-center justify-center p-6">
@@ -37,7 +39,7 @@ function ChatWindow({ conversation, currentUserId }) {
 
       <section className="flex-1 p-6">
         <p className="text-gray-400">
-          No messages yet.
+          <MessageList messages={messages} currentUserId={currentUserId} />
         </p>
       </section>
       <MessageComposer />

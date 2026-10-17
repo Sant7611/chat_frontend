@@ -1,0 +1,12 @@
+
+import MessageItem from "./MessageItem";
+
+function MessageList({ messages, currentUserId }) {
+  return (
+    <section className="flex-1 overflow-y-auto p-4 space-y-3">
+      {messages.map((message)=> <MessageItem key={message.id} message={message} currentUserId={currentUserId} />)}
+    </section>
+  );
+}
+
+export default MessageList;

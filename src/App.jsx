@@ -36,6 +36,21 @@ const App = () => {
     },
   ];
 
+  
+  const messages = [
+  {
+    id: 1,
+    content: "Hello Hari!",
+    sender: { id: "user-1" },
+  },
+  {
+    id: 2,
+    content: "Hello Ram!",
+    sender: { id: "user-2" },
+  },
+];
+  
+
   const currentUserId = "user-1";
 
   const [selectedConversation, setSelectedConversation] = useState(null);
@@ -53,9 +68,9 @@ const App = () => {
         selectedId={selectedConversation?.id}
         onSelect={handleConversationSelection}
       />
-
+    
       <main className="flex-1 p-6">
-        <ChatWindow conversation={selectedConversation} currentUserId={currentUserId} />
+        <ChatWindow messages={messages} conversation={selectedConversation} currentUserId={currentUserId} />
       </main>
     </div>
   );
