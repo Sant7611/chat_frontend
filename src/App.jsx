@@ -37,19 +37,6 @@ const App = () => {
   ];
 
   
-  const messages = [
-  {
-    id: 1,
-    content: "Hello Hari!",
-    sender: { id: "user-1" },
-  },
-  {
-    id: 2,
-    content: "Hello Ram!",
-    sender: { id: "user-2" },
-  },
-];
-  
 
   const currentUserId = "user-1";
 
@@ -68,10 +55,10 @@ const App = () => {
         selectedId={selectedConversation?.id}
         onSelect={handleConversationSelection}
       />
-    
-      <main className="flex-1 p-6">
-        <ChatWindow messages={messages} conversation={selectedConversation} currentUserId={currentUserId} />
-      </main>
+
+      
+        <ChatWindow conversation={selectedConversation} currentUserId={currentUserId} />
+      
     </div>
   );
 };

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IoIosSend } from "react-icons/io";
 
-function MessageComposer() {
+function MessageComposer({onSend}) {
   const [message, setMessage] = useState("");
 
   function handleSubmit(event) {
@@ -10,6 +10,7 @@ function MessageComposer() {
     const content = message.trim();
 
     if (!content) return;
+    onSend(content)
 
     console.log(content);
     setMessage("");

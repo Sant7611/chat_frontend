@@ -7,7 +7,7 @@ function ConversationList({ conversations, currentUserId, selectedId, onSelect }
 
       {conversations.map((conversation) => {
         const otherUser = conversation.participants.find(
-          (user) => user.id != { currentUserId },
+          (user) => user.id !==  currentUserId ,
         );
 
         return (
