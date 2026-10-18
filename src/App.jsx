@@ -48,7 +48,7 @@ const App = () => {
   }
 
   return (
-    <div className="flex min-h-screen">
+    <div className="flex h-screen">
       <ConversationList
         conversations={conversations}
         currentUserId={currentUserId}

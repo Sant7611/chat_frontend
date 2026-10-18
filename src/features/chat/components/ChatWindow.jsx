@@ -71,11 +71,14 @@ function ChatWindow({ conversation, currentUserId }) {
         </div>
       </header>
       <section className="flex-1 p-6">
-        <MessageList messages={messageByConversation[conversation.id] ?? [] } currentUserId={currentUserId} />
+        <MessageList
+          messages={messageByConversation[conversation.id] ?? []}
+          currentUserId={currentUserId}
+        />
       </section>
 
       <section className="p-6">
-        <MessageComposer onSend={handleSubmitMessage}  />
+        <MessageComposer onSend={handleSubmitMessage} />
       </section>
     </main>
   );

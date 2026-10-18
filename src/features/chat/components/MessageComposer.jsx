@@ -32,6 +32,7 @@ function MessageComposer({onSend}) {
       />
 
       <button
+      type="submit"
         className="bg-blue-200  rounded-xl  cursor-pointer px-3 py-2 flex gap-1 items-center justify-center"
         disabled={!message.trim()}
       >
